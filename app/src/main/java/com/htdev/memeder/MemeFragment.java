@@ -43,6 +43,7 @@ public class MemeFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+        ConnectionAdapter connectionAdapter = new ConnectionAdapter();
         return fragment;
     }
 
@@ -53,6 +54,7 @@ public class MemeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        ConnectionAdapter connectionAdapter = new ConnectionAdapter();
     }
 
     @Override
