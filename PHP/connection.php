@@ -1,8 +1,8 @@
 <?php
-$servername = "sql204.epizy.com";
-$user = "epiz_23024477";
-$pass = "1haxAREfags9";
-$dbname = "Memes";
+$servername = "192.168.0.11";
+$user = "pi";
+$pass = "raspberry";
+$dbname = "memeder";
 
 // Create connection
 $conn = new mysqli($servername, $user, $pass, $dbname);
