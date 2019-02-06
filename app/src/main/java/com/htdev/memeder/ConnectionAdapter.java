@@ -10,9 +10,12 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 public class ConnectionAdapter {
+    //TODO: Add function to load several memes and return meme list
+
     AsyncHttpClient httpClient = new AsyncHttpClient();
-    String url = "http://memeder.epizy.com/connection.php";
+    String url = "http://192.168.0.11/connection.php";
     public ConnectionAdapter() {
+        httpClient.setURLEncodingEnabled(false);
         httpClient.get(url, null, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

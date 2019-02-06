@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,6 +58,12 @@ public class MemeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         ConnectionAdapter connectionAdapter = new ConnectionAdapter();
+        List<Meme> memeList = new ArrayList<>();
+        memeList.add(new Meme(0, "Jeff", "meme.jpg", 10 ));
+        memeList.add(new Meme(1, "Cheff", "meme1.jpg", 20 ));
+        memeList.add(new Meme(3, "Geof", "meme2.jpg", 30 ));
+        CardAdapter cardAdapter = new CardAdapter(getContext(), R.layout.card_view, memeList);
+        //TODO: Attach adapter to swipe card view
     }
 
     @Override
