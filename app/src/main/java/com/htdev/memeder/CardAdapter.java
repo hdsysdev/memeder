@@ -11,16 +11,18 @@ import android.support.annotation.NonNull;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 
-public class CardAdapter extends ArrayAdapter {
+public class CardAdapter extends ArrayAdapter<Meme> {
 
     private Context mContext;
     private List<Meme> memeList;
-
+    private String URL = "http://192.168.0.11/img/";
     public CardAdapter(@NonNull Context context, int resource, List<Meme> memes) {
-        super(context, resource);
+        super(context, resource, memes);
         mContext = context;
         memeList = memes;
     }
@@ -34,9 +36,11 @@ public class CardAdapter extends ArrayAdapter {
 
         ImageView imageView = (ImageView) cardView.findViewById(R.id.cardImage);
         //TODO: Add image from url with image library
+        Glide.with(cardView).load("https://i.imgflip.com/25p6ij.jpg").into(imageView);
+
 
         TextView textView = (TextView) cardView.findViewById(R.id.cardTextView);
-        textView.setText(currentMeme.getPostedBy());
+        textView.setText("A meme");
         return cardView;
     }
 }

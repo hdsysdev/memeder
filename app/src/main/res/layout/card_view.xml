@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="top"
     android:padding="10dp"
-    android:layout_alignParentTop="true">
+    android:layout_alignParentTop="true"
+    >
 
     <RelativeLayout
         android:id="@+id/card_view"
@@ -27,7 +28,7 @@
             android:paddingLeft="10dp"
             android:paddingBottom="10dp"
             android:text="Posted By"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="24sp" />
 
     </RelativeLayout>

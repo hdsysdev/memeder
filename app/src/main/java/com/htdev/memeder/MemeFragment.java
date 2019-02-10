@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +48,6 @@ public class MemeFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
-        ConnectionAdapter connectionAdapter = new ConnectionAdapter();
         return fragment;
     }
 
@@ -57,20 +58,51 @@ public class MemeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        ConnectionAdapter connectionAdapter = new ConnectionAdapter();
-        List<Meme> memeList = new ArrayList<>();
-        memeList.add(new Meme(0, "Jeff", "meme.jpg", 10 ));
-        memeList.add(new Meme(1, "Cheff", "meme1.jpg", 20 ));
-        memeList.add(new Meme(3, "Geof", "meme2.jpg", 30 ));
-        CardAdapter cardAdapter = new CardAdapter(getContext(), R.layout.card_view, memeList);
+
         //TODO: Attach adapter to swipe card view
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_meme, container, false);
+
+        ConnectionAdapter connectionAdapter = new ConnectionAdapter();
+        List<Meme> memeList = new ArrayList<>();
+        memeList.add(connectionAdapter.getMeme(1));
+        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));
+        CardAdapter cardAdapter = new CardAdapter(getContext(), R.layout.card_view, memeList);
+
+        SwipeFlingAdapterView flingAdapterView = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
+        flingAdapterView.setAdapter(cardAdapter);
+        flingAdapterView.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
+            @Override
+            public void removeFirstObjectInAdapter() {
+
+            }
+
+            @Override
+            public void onLeftCardExit(Object o) {
+
+            }
+
+            @Override
+            public void onRightCardExit(Object o) {
+
+            }
+
+            @Override
+            public void onAdapterAboutToEmpty(int i) {
+
+            }
+
+            @Override
+            public void onScroll(float v) {
+
+            }
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meme, container, false);
+        return view;
     }
 
 }
