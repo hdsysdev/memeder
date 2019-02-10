@@ -20,7 +20,7 @@ public class CardAdapter extends ArrayAdapter<Meme> {
 
     private Context mContext;
     private List<Meme> memeList;
-    private String URL = "http://192.168.0.11/img/";
+    private String URL = "http://100.67.178.217/img/";
     public CardAdapter(@NonNull Context context, int resource, List<Meme> memes) {
         super(context, resource, memes);
         mContext = context;
