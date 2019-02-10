@@ -32,15 +32,15 @@ public class CardAdapter extends ArrayAdapter<Meme> {
         View cardView = convertView;
         if(cardView == null)
             cardView = LayoutInflater.from(mContext).inflate(R.layout.card_view, parent,false);
-        Meme currentMeme = memeList.get(position);
+        Meme currentMeme = memeList.get(0);
 
         ImageView imageView = (ImageView) cardView.findViewById(R.id.cardImage);
         //TODO: Add image from url with image library
-        Glide.with(cardView).load("https://i.imgflip.com/25p6ij.jpg").into(imageView);
+        Glide.with(cardView).load(URL + currentMeme.getImage()).into(imageView);
 
 
         TextView textView = (TextView) cardView.findViewById(R.id.cardTextView);
-        textView.setText("A meme");
+        textView.setText(currentMeme.getPostedBy());
         return cardView;
     }
 }

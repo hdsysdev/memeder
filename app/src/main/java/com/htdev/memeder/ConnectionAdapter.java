@@ -15,16 +15,17 @@ public class ConnectionAdapter {
     //TODO: Add function to load several memes and return meme list
     Meme currentMeme;
     AsyncHttpClient httpClient = new AsyncHttpClient();
-    String url = "http://192.168.0.11/connection.php";
+    String url = "http://192.168.0.11/fetch_memes.php";
     Gson gson = new Gson();
     ConnectionAdapter() {
         httpClient.setURLEncodingEnabled(false);
 
     }
 
-    public Meme getMeme(Integer id){
+    Meme getMeme(Integer id){
         RequestParams params = new RequestParams("ID", id);
-        httpClient.get(url, params, new JsonHttpResponseHandler(){
+
+        httpClient.post(url, params, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
