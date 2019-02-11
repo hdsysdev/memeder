@@ -82,6 +82,7 @@ public class MemeHome extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -122,9 +123,9 @@ public class MemeHome extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
-                case 0:
-                    return PlaceholderFragment.newInstance(position +1);
                 case 1:
+                    return PlaceholderFragment.newInstance(position +1);
+                case 0:
                     return MemeFragment.newInstance("", "");
             }
             return PlaceholderFragment.newInstance(position + 1);

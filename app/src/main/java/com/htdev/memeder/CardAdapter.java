@@ -36,7 +36,7 @@ public class CardAdapter extends ArrayAdapter<Meme> {
 
         ImageView imageView = (ImageView) cardView.findViewById(R.id.cardImage);
         //TODO: Add image from url with image library
-        Glide.with(cardView).load(URL + currentMeme.getImage()).into(imageView);
+        Glide.with(cardView).load(URL + currentMeme.getImageName()).into(imageView);
 
 
         TextView textView = (TextView) cardView.findViewById(R.id.cardTextView);

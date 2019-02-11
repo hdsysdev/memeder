@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Meme {
     private Integer ID = 0;
-    private String postedBy = "Jeff";
-    private String image = "meme.jpg";
+    private String PostedBy = "Jeff";
+    private String ImageName = "meme.jpg";
     private Integer rating = 0;
-    private List<Integer> coments = new ArrayList<>();
+    private String Comments;
 
-    public Meme(Integer ID, String postedBy, String image, Integer rating) {
+    public Meme(Integer ID, String PostedBy, String ImageName, Integer rating) {
         this.ID = ID;
-        this.postedBy = postedBy;
-        this.image = image;
+        this.PostedBy = PostedBy;
+        this.ImageName = ImageName;
         this.rating = rating;
-//        this.coments = coments;
+        this.Comments = Comments;
     }
 
     public Integer getID() {
@@ -27,19 +27,19 @@ public class Meme {
     }
 
     public String getPostedBy() {
-        return postedBy;
+        return PostedBy;
     }
 
-    public void setPostedBy(String postedBy) {
-        this.postedBy = postedBy;
+    public void setPostedBy(String PostedBy) {
+        this.PostedBy = PostedBy;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageName() {
+        return ImageName;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageName(String ImageName) {
+        this.ImageName = ImageName;
     }
 
     public Integer getRating() {
@@ -50,11 +50,11 @@ public class Meme {
         this.rating = rating;
     }
 
-    public List<Integer> getComents() {
-        return coments;
+    public String getComments() {
+        return Comments;
     }
 
-    public void setComents(List<Integer> coments) {
-        this.coments = coments;
+    public void setComments(String Comments) {
+        this.Comments = Comments;
     }
 }

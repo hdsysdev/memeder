@@ -69,7 +69,7 @@ public class MemeFragment extends Fragment {
 
         ConnectionAdapter connectionAdapter = new ConnectionAdapter();
         List<Meme> memeList = new ArrayList<>();
-        memeList.add(connectionAdapter.getMeme(1));
+//        memeList.add(connectionAdapter.getMeme(1));
 //        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));
         CardAdapter cardAdapter = new CardAdapter(getContext(), R.layout.card_view, memeList);
 
@@ -102,6 +102,8 @@ public class MemeFragment extends Fragment {
             }
 
         });
+//        connectionAdapter.loadMemes(getContext(), view, cardAdapter);
+        connectionAdapter.loadMemes(getActivity(), view, cardAdapter);
         // Inflate the layout for this fragment
         return view;
     }
