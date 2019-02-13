@@ -10,6 +10,9 @@ import android.widget.FrameLayout;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -73,10 +76,10 @@ public class ConnectionAdapter {
 
         return memeHolder.meme;
     }
-    public void loadMemes(Activity activity, View view, CardAdapter cardAdapter){
+    public void loadMemes(View view, List<Meme> memeList, CardAdapter cardAdapter){
         //TODO: Remove ID 1 parameter and load amount of memes using new php function
         RequestBody requestBody = new FormBody.Builder()
-                .add("ID", "1")
+                .add("amount", "5")
                 .build();
 
         Request request = new Request.Builder()
@@ -102,13 +105,15 @@ public class ConnectionAdapter {
                 } else {
                     String responseTmp = response.body().string();
                     Log.e("CONNECTION", responseTmp);
-                    memeHolder.meme = gson.fromJson(responseTmp, Meme.class);
+                    memeHolder.memeList = gson.fromJson(responseTmp, Meme[].class);
 
 
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            cardAdapter.add(memeHolder.meme);
+//                            cardAdapter.addAll(memeHolder.memeList);
+                            memeList.addAll(Arrays.asList(memeHolder.memeList));
+                            cardAdapter.notifyDataSetChanged();
                             progressBar.setVisibility(View.GONE);
                         }
                     });
@@ -119,6 +124,7 @@ public class ConnectionAdapter {
     }
     public static class MemeHolder {
         public Meme meme = new Meme(0, "Not found", "meme.jpg", 10 );
+        public Meme[] memeList;
     }
 }
 

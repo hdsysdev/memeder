@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:rotation_degrees="15.5"
+        app:max_visible="4"
+        app:min_adapter_stack="3"
         tools:context=".MemeHome"
         android:layout_centerHorizontal="true" />
     <FrameLayout
