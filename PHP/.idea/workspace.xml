@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="033af525-4de1-4f32-b193-335d45c3779b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/fetch_memes.php" beforeDir="false" afterPath="$PROJECT_DIR$/fetch_memes.php" afterDir="false" />
-    </list>
+    <list default="true" id="033af525-4de1-4f32-b193-335d45c3779b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,17 +105,18 @@
       <workItem from="1548983329564" duration="1586000" />
       <workItem from="1549819983087" duration="12000" />
       <workItem from="1549970749842" duration="1269000" />
+      <workItem from="1550073860773" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2867000" />
+    <option name="totallyTimeSpent" value="3465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

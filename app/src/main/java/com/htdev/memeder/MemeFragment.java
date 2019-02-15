@@ -62,6 +62,7 @@ public class MemeFragment extends Fragment {
         //TODO: Attach adapter to swipe card view
     }
 
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
