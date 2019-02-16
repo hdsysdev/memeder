@@ -1,5 +1,5 @@
 <?php
-$servername = "192.168.0.11";
+$servername = "100.67.178.217";
 $user = "pi";
 $pass = "raspberry";
 $dbname = "memeder";

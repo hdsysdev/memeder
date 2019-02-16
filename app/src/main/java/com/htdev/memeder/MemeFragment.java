@@ -62,6 +62,7 @@ public class MemeFragment extends Fragment {
         //TODO: Attach adapter to swipe card view
     }
 
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,16 +70,17 @@ public class MemeFragment extends Fragment {
 
         ConnectionAdapter connectionAdapter = new ConnectionAdapter();
         List<Meme> memeList = new ArrayList<>();
-        memeList.add(connectionAdapter.getMeme(1));
-        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));
-        CardAdapter cardAdapter = new CardAdapter(getContext(), R.layout.card_view, memeList);
+//        memeList.add(connectionAdapter.getMeme(1));
+//        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));
+        CardAdapter cardAdapter = new CardAdapter(getContext(), memeList);
 
         SwipeFlingAdapterView flingAdapterView = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
         flingAdapterView.setAdapter(cardAdapter);
         flingAdapterView.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
-
+                memeList.remove(0);
+                cardAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -93,14 +95,22 @@ public class MemeFragment extends Fragment {
 
             @Override
             public void onAdapterAboutToEmpty(int i) {
-
+                connectionAdapter.loadMemes(view, memeList, cardAdapter);
             }
+
 
             @Override
-            public void onScroll(float v) {
+            public void onScroll(float scrollProgressPercent) {
 
+//                View view = flingAdapterView.getSelectedView();
+//                view.findViewById(R.id.card_view).setAlpha(0);
+//                view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
+//                view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
             }
+
         });
+//        connectionAdapter.loadMemes(getContext(), view, cardAdapter);
+        connectionAdapter.loadMemes(view, memeList, cardAdapter);
         // Inflate the layout for this fragment
         return view;
     }

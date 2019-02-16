@@ -20,9 +20,9 @@ public class CardAdapter extends ArrayAdapter<Meme> {
 
     private Context mContext;
     private List<Meme> memeList;
-    private String URL = "http://192.168.0.11/img/";
-    public CardAdapter(@NonNull Context context, int resource, List<Meme> memes) {
-        super(context, resource, memes);
+    private String URL = "http://100.67.178.217/img/";
+    public CardAdapter(@NonNull Context context, List<Meme> memes) {
+        super(context, 0, memes);
         mContext = context;
         memeList = memes;
     }
@@ -31,12 +31,12 @@ public class CardAdapter extends ArrayAdapter<Meme> {
     public View getView(int position, @Nullable View convertView, ViewGroup parent) {
         View cardView = convertView;
         if(cardView == null)
-            cardView = LayoutInflater.from(mContext).inflate(R.layout.card_view, parent,false);
-        Meme currentMeme = memeList.get(0);
+            cardView = LayoutInflater.from(getContext()).inflate(R.layout.card_view, parent,false);
+        Meme currentMeme = memeList.get(position);
 
         ImageView imageView = (ImageView) cardView.findViewById(R.id.cardImage);
         //TODO: Add image from url with image library
-        Glide.with(cardView).load(URL + currentMeme.getImage()).into(imageView);
+        Glide.with(getContext()).load(URL + currentMeme.getImageName()).into(imageView);
 
 
         TextView textView = (TextView) cardView.findViewById(R.id.cardTextView);
