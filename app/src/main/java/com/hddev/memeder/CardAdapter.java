@@ -1,4 +1,4 @@
-package com.htdev.memeder;
+package com.hddev.memeder;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.htdev.memeder.R;
 
 import java.util.List;
 
