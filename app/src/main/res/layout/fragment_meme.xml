@@ -35,12 +35,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="69"
+                android:text="Jeff"
                 android:textSize="35dp"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
                 android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>#
+                android:paddingRight="5dp"/>
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="match_parent"
@@ -70,8 +70,14 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"/>
         </LinearLayout>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="0dp">-->
+<!--            -->
+<!--        </ImageView>-->
+
+
     </RelativeLayout>
 </LinearLayout>

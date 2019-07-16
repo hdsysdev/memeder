@@ -70,6 +70,7 @@ public class MemeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_meme, container, false);
 
         ConnectionAdapter connectionAdapter = new ConnectionAdapter();
+
         List<Meme> memeList = new ArrayList<>();
 //        memeList.add(connectionAdapter.getMeme(1));
 //        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));

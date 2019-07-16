@@ -22,6 +22,9 @@ public class ConnectionAdapter {
     Meme currentMeme;
 //    OkHttpClient httpClient = new OkHttpClient();
 
+    /**
+     *
+     */
     Gson gson = new Gson();
     String url = "http://100.67.178.217/fetch_memes.php";
     private Handler mHandler = new Handler(Looper.getMainLooper());
@@ -40,8 +43,7 @@ public class ConnectionAdapter {
 //                .build();
 //
 //        Request request = new Request.Builder()
-//                .url(url)
-//                .post(requestBody)
+//                .url(url)//                .post(requestBody)
 //                .build();
         final MemeHolder memeHolder = new MemeHolder();
 
