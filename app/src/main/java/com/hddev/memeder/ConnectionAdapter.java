@@ -8,34 +8,23 @@ import com.google.gson.Gson;
 
 import java.util.List;
 
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-
 public class ConnectionAdapter {
     //TODO: Add function to load several memes and return meme list
     Meme currentMeme;
-    OkHttpClient httpClient = new OkHttpClient();
 
     Gson gson = new Gson();
     String url = "http://100.67.178.217/fetch_memes.php";
     private Handler mHandler = new Handler(Looper.getMainLooper());
-//    Gson gson = new Gson();
+
+//    StorageReference
+
     ConnectionAdapter() {
 
 
     }
 
     Meme getMeme(Integer id){
-        RequestBody requestBody = new FormBody.Builder()
-                .add("ID", id.toString())
-                .build();
 
-        Request request = new Request.Builder()
-                .url(url)
-                .post(requestBody)
-                .build();
         final MemeHolder memeHolder = new MemeHolder();
 
 
@@ -106,7 +95,7 @@ public class ConnectionAdapter {
 
     }
 
-    public static void uploadMeme(){
+    public static void uploadMeme(String absolutePath){
 
     }
 

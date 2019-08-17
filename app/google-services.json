@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "386987175191",
+    "firebase_url": "https://memeder-53106.firebaseio.com",
+    "project_id": "memeder-53106",
+    "storage_bucket": "memeder-53106.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386987175191:android:e898c975652f151e",
+        "android_client_info": {
+          "package_name": "com.hddev.memeder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386987175191-9j42e6obqpa9e2fr0im6l1tpu7n4lruu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6jQ0dZkmwvfI2hGwdUrKUTiqgCONRIA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386987175191-9j42e6obqpa9e2fr0im6l1tpu7n4lruu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

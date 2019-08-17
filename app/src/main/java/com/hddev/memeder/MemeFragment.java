@@ -2,7 +2,8 @@ package com.hddev.memeder;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,7 @@ public class MemeFragment extends Fragment {
      * @return A new instance of fragment MemeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MemeFragment newInstance(String param1, String param2) {
+    public static Fragment newInstance(String param1, String param2) {
         MemeFragment fragment = new MemeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
