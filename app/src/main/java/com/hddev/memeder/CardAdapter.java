@@ -1,4 +1,4 @@
-package com.htdev.memeder;
+package com.hddev.memeder;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

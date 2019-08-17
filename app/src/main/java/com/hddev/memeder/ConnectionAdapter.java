@@ -1,26 +1,17 @@
-package com.htdev.memeder;
+package com.hddev.memeder;
 
-import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import com.google.gson.Gson;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class ConnectionAdapter {
     //TODO: Add function to load several memes and return meme list

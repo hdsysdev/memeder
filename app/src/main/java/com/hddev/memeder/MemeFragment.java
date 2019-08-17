@@ -1,4 +1,4 @@
-package com.htdev.memeder;
+package com.hddev.memeder;
 
 
 import android.os.Bundle;

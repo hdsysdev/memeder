@@ -1,7 +1,4 @@
-package com.htdev.memeder;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.hddev.memeder;
 
 public class Meme {
     private Integer ID = 0;
