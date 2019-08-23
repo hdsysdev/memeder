@@ -71,7 +71,7 @@ public class MemeFragment extends Fragment {
 
         ConnectionAdapter connectionAdapter = new ConnectionAdapter();
         List<Meme> memeList = new ArrayList<>();
-//        memeList.add(connectionAdapter.getMeme(1));
+        memeList.add(connectionAdapter.getMeme(1));
 //        memeList.add(new Meme(21, "Jeffina", "meme.jpg", 20));
         CardAdapter cardAdapter = new CardAdapter(getContext(), memeList);
 

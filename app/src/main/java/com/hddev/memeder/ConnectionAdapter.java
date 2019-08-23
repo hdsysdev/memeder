@@ -2,8 +2,17 @@ package com.hddev.memeder;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -27,6 +36,36 @@ public class ConnectionAdapter {
 
         final MemeHolder memeHolder = new MemeHolder();
 
+        // Access a Cloud Firestore instance from your Activity
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        /*!
+        Loading images is a 2 stage process. The meme info like points and uploader name.
+        First stage is getting image name from id and returning full meme object.
+        Second stage is getting image from firestore and populating the image view in the card adapter.
+         */
+        DocumentReference docRef = db.collection("memes")
+                .document("xTNXbNXNOpFHGzOWG2jh");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d("Document", "DocumentSnapshot data: " + document.getData());
+                        //Set meme variables from firebase document
+                        memeHolder.meme.setID(document.getDouble("num").intValue());
+                        memeHolder.meme.setPostedBy(document.getString("PostedBy"));
+                        memeHolder.meme.setImageName(document.getString("ImageName"));
+                        memeHolder.meme.setRating(document.getDouble("Rating").intValue());
+
+                    } else {
+                        Log.d("Document", "No such document");
+                    }
+                } else {
+                    Log.d("Document", "get failed with ", task.getException());
+                }
+            }
+        });
 
 //        try (Response response = httpClient.newCall(request).execute()) {
 //            String responseTmp = response.body().string();
