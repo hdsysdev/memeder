@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.hdstudio.memeder.ui.dashboard.DashboardFragment"
+        android:name="com.hdstudio.memeder.ui.memecard.MemeCardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_meme_card" />
 
     <fragment
         android:id="@+id/navigation_notifications"
