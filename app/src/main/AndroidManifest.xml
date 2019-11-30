@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.htdev.memeder">
-
-    <!-- To access Google+ APIs: -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.hdstudio.memeder">
 
     <application
         android:allowBackup="true"
@@ -13,9 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MemeHome"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
