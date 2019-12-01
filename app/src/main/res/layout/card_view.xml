@@ -6,6 +6,10 @@
         <variable
             name="meme"
             type="com.hdstudio.memeder.data.model.Meme" />
+
+        <variable
+            name="viewModel"
+            type="com.hdstudio.memeder.ui.memecard.MemeCardViewModel" />
     </data>
 
     <FrameLayout

@@ -3,10 +3,12 @@ package com.hdstudio.memeder
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.hdstudio.memeder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
