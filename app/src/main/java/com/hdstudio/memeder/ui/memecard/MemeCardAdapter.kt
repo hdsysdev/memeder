@@ -8,7 +8,7 @@ import com.hdstudio.memeder.databinding.CardViewBinding
 import com.hdstudio.memeder.databinding.FragmentMemeCardBinding
 
 class MemeCardAdapter(
-    private val viewModel: MemeCardViewModel
+    private var viewModel: MemeCardViewModel
 ) : RecyclerView.Adapter<MemeCardAdapter.ViewHolder>() {
 
 
@@ -25,7 +25,7 @@ class MemeCardAdapter(
         holder.bind(viewModel.memeList.)
     }
 
-    override fun getItemCount(): Int = viewModel.memeList.observe()
+    override fun getItemCount(): Int = viewModel.memeList.
 
 
     fun setMemeList(memeList: ArrayList<MemeCard>){

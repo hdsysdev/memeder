@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.hdstudio.memeder.R
+import com.hdstudio.memeder.data.model.MemeCard
 
 import com.hdstudio.memeder.databinding.FragmentMemeCardBinding
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager
@@ -55,11 +56,13 @@ class MemeCardFragment : Fragment() {
 
         binding.cardStackView.adapter = MemeCardAdapter(viewModel = viewModel)
 
-        viewModel.memeList.observe(viewLifecycleOwner,
-            Observer {
+        val memeListObserver = Observer<ArrayList<MemeCard>> { memes ->
+            binding.cardStackView.adapter.
+        }
 
-                (binding.cardStackView.adapter as MemeCardAdapter).notifyDataSetChanged()
-            })
+        viewModel.memeList.observe(this,)
+
+        viewModel.add
 
         binding.viewModel = viewModel
     }

@@ -7,6 +7,7 @@ import com.hdstudio.memeder.data.model.Meme
 import com.hdstudio.memeder.data.model.MemeCard
 
 class MemeCardViewModel : ViewModel() {
+
     private val mMemeList = MutableLiveData<ArrayList<MemeCard>>().apply {
         val fakeCard = MemeCard(
             Meme(
